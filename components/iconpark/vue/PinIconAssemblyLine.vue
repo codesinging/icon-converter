@@ -1,0 +1,35 @@
+<template>
+<svg :width="size" :height="size" viewBox="0 0 48 48" :fill="fill" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="4" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth"/><path d="M28 38H13.0004C9.00037 38 6.00037 35.0833 6 31C5.99963 26.9167 9.00037 24 13.0004 24H20" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.0003 24H34.9997C38.9997 24 41.9996 21.0833 42 17C42.0004 12.9167 38.9997 10 34.9997 10H20" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10L12 10" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M36 38H42" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="38" r="4" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth"/></svg>
+</template>
+
+<script>
+export default {
+    name: "PinIconAssemblyLine",
+    props: {
+        filled: {
+            type: Boolean,
+            default: false
+        },
+        size: {
+            type: [Number, String],
+            default: '1rem'
+        },
+        color: {
+            type: String,
+            default: 'currentColor'
+        },
+        strokeWidth: {
+            type: [String, Number],
+            default: 4
+        },
+    },
+    computed: {
+        stroke() {
+            return this.color
+        },
+        fill() {
+            return this.filled ? this.color : 'none'
+        }
+    },
+}
+</script>

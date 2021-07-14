@@ -1,0 +1,35 @@
+<template>
+<svg :width="size" :height="size" viewBox="0 0 48 48" :fill="fill" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="13" width="38" height="28" rx="2" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth"/><circle cx="18" cy="28" r="6" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth"/><path d="M30 24L36 24" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 32L36 32" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 13L25 4" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</template>
+
+<script>
+export default {
+    name: "PinIconRadio",
+    props: {
+        filled: {
+            type: Boolean,
+            default: false
+        },
+        size: {
+            type: [Number, String],
+            default: '1rem'
+        },
+        color: {
+            type: String,
+            default: 'currentColor'
+        },
+        strokeWidth: {
+            type: [String, Number],
+            default: 4
+        },
+    },
+    computed: {
+        stroke() {
+            return this.color
+        },
+        fill() {
+            return this.filled ? this.color : 'none'
+        }
+    },
+}
+</script>

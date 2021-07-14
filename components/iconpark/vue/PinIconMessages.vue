@@ -1,0 +1,35 @@
+<template>
+<svg :width="size" :height="size" viewBox="0 0 48 48" :fill="fill" xmlns="http://www.w3.org/2000/svg"><path d="M39 6H9C7.34315 6 6 7.34315 6 9V39C6 40.6569 7.34315 42 9 42H39C40.6569 42 42 40.6569 42 39V9C42 7.34315 40.6569 6 39 6Z" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth"/><path d="M35 23C35 28.5229 30.5229 33 25 33C22.0133 33 15 33 15 33C15 33 15 25.5361 15 23C15 17.4771 19.4771 13 25 13C30.5229 13 35 17.4771 35 23Z" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 21H28" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 27H24" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</template>
+
+<script>
+export default {
+    name: "PinIconMessages",
+    props: {
+        filled: {
+            type: Boolean,
+            default: false
+        },
+        size: {
+            type: [Number, String],
+            default: '1rem'
+        },
+        color: {
+            type: String,
+            default: 'currentColor'
+        },
+        strokeWidth: {
+            type: [String, Number],
+            default: 4
+        },
+    },
+    computed: {
+        stroke() {
+            return this.color
+        },
+        fill() {
+            return this.filled ? this.color : 'none'
+        }
+    },
+}
+</script>

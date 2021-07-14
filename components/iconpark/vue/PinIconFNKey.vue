@@ -1,0 +1,35 @@
+<template>
+<svg :width="size" :height="size" viewBox="0 0 48 48" :fill="fill" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="36" height="36" rx="3" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 17V32" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round"/><path d="M26 23C26 20.6214 27.6 19 30 19C32.4 19 34 20.5273 34 23C34 24.6484 34 28.707 34 32" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round"/><path d="M21 16H14V32" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 24H21" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</template>
+
+<script>
+export default {
+    name: "PinIconFNKey",
+    props: {
+        filled: {
+            type: Boolean,
+            default: false
+        },
+        size: {
+            type: [Number, String],
+            default: '1rem'
+        },
+        color: {
+            type: String,
+            default: 'currentColor'
+        },
+        strokeWidth: {
+            type: [String, Number],
+            default: 4
+        },
+    },
+    computed: {
+        stroke() {
+            return this.color
+        },
+        fill() {
+            return this.filled ? this.color : 'none'
+        }
+    },
+}
+</script>

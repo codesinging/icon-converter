@@ -1,0 +1,35 @@
+<template>
+<svg :width="size" :height="size" viewBox="0 0 48 48" :fill="fill" xmlns="http://www.w3.org/2000/svg"><path d="M31.45 16.96C34.2114 16.96 36.45 14.7214 36.45 11.96C36.45 9.19857 34.2114 6.95999 31.45 6.95999C28.6885 6.95999 26.45 9.19857 26.45 11.96C26.45 14.7214 28.6885 16.96 31.45 16.96Z" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth" stroke-miterlimit="2"/><path d="M36 34L34 23L23 28L10 25" :stroke="stroke" :stroke-width="strokeWidth" stroke-miterlimit="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 41.03H44" :stroke="stroke" :stroke-width="strokeWidth" stroke-miterlimit="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="25" r="5" fill="currentColor"/><circle cx="6" cy="17" r="2" fill="currentColor"/><path d="M34 23L44 29L29 34" :stroke="stroke" :stroke-width="strokeWidth" stroke-miterlimit="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</template>
+
+<script>
+export default {
+    name: "PinIconTabletennis",
+    props: {
+        filled: {
+            type: Boolean,
+            default: false
+        },
+        size: {
+            type: [Number, String],
+            default: '1rem'
+        },
+        color: {
+            type: String,
+            default: 'currentColor'
+        },
+        strokeWidth: {
+            type: [String, Number],
+            default: 4
+        },
+    },
+    computed: {
+        stroke() {
+            return this.color
+        },
+        fill() {
+            return this.filled ? this.color : 'none'
+        }
+    },
+}
+</script>

@@ -1,28 +1,55 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <div class="box">
+          <pin-icon-add-item></pin-icon-add-item>
+          <pin-icon-add-item size="24"></pin-icon-add-item>
+          <pin-icon-add-item size="100"></pin-icon-add-item>
+          <pin-icon-add-item size="100" color="red"></pin-icon-add-item>
+          <pin-icon-add-item size="100" filled></pin-icon-add-item>
+          <pin-icon-add-item size="100" filled class="text-red"></pin-icon-add-item>
+          <pin-icon-add-item size="100" class="text-red bg-gray p-8" stroke-width="1"></pin-icon-add-item>
+      </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import PinIconAddItem from "../components/iconpark/vue/PinIconAddItem";
 export default {
   name: 'App',
   components: {
-    HelloWorld
+      PinIconAddItem
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    padding: 100px;
+}
+.box{
+    border: solid 1px #eeeeee;
+    padding: 20px;
+}
+.text-white{
+    color: white;
+}
+.text-red{
+    color: red;
+}
+.bg-red{
+    background-color: red;
+}
+.bg-gray{
+    background-color: #ccc;
+}
+.p-4{
+    padding: 16px;
+}
+.p-8{
+    padding: 32px;
+}
+.rounded-full{
+    border-radius: 999px;
 }
 </style>

@@ -1,0 +1,35 @@
+<template>
+<svg :width="size" :height="size" viewBox="0 0 48 48" :fill="fill" xmlns="http://www.w3.org/2000/svg"><rect x="4.92847" y="13.2239" width="11" height="5" rx="2" transform="rotate(-46.0247 4.92847 13.2239)" :stroke="stroke" :stroke-width="strokeWidth"/><rect x="19.3213" y="27.1108" width="11" height="5" rx="2" transform="rotate(-46.0247 19.3213 27.1108)" :stroke="stroke" :stroke-width="strokeWidth"/><rect x="6.4436" y="18.8546" width="17" height="5" rx="2" transform="rotate(-46.0247 6.4436 18.8546)" :stroke="stroke" :stroke-width="strokeWidth"/><rect x="13.6401" y="25.798" width="17" height="5" rx="2" transform="rotate(-46.0247 13.6401 25.798)" :stroke="stroke" :stroke-width="strokeWidth"/><rect x="7.2644" y="25.2048" width="25" height="5" rx="2" transform="rotate(-46.0247 7.2644 25.2048)" :stroke="stroke" :stroke-width="strokeWidth"/><path d="M25.0024 28.4237L29.1685 24.1058L43.5751 38.0061L39.409 42.3239L25.0024 28.4237Z" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 40.25C21 42.3211 19.2091 44 17 44C14.7909 44 13 42.3211 13 40.25C13 38.1789 17 34 17 34C17 34 21 38.1789 21 40.25Z" :stroke="stroke" :stroke-width="strokeWidth" stroke-linejoin="round"/></svg>
+</template>
+
+<script>
+export default {
+    name: "PinIconHoneyOne",
+    props: {
+        filled: {
+            type: Boolean,
+            default: false
+        },
+        size: {
+            type: [Number, String],
+            default: '1rem'
+        },
+        color: {
+            type: String,
+            default: 'currentColor'
+        },
+        strokeWidth: {
+            type: [String, Number],
+            default: 4
+        },
+    },
+    computed: {
+        stroke() {
+            return this.color
+        },
+        fill() {
+            return this.filled ? this.color : 'none'
+        }
+    },
+}
+</script>

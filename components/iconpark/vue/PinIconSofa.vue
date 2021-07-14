@@ -1,0 +1,35 @@
+<template>
+<svg :width="size" :height="size" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g><rect width="48" height="48" fill="white" fill-opacity="0.01" stroke-linejoin="round" :stroke-width="strokeWidth" stroke="none" fill-rule="evenodd"/><g transform="translate(4.000000, 8.000000)"><rect :fill="fill" fill-rule="nonzero" x="0" y="13" width="8" height="14" stroke-linejoin="round" :stroke-width="strokeWidth" :stroke="stroke"/><rect :fill="fill" fill-rule="nonzero" x="32" y="13" width="8" height="14" stroke-linejoin="round" :stroke-width="strokeWidth" :stroke="stroke"/><rect stroke-linecap="round" x="8" y="19" width="24" height="8" stroke-linejoin="round" :stroke-width="strokeWidth" :stroke="stroke" :fill="fill" fill-rule="evenodd"/><polyline stroke-linecap="round" points="4 12 4 0 36 0 36 12" stroke-linejoin="round" :stroke-width="strokeWidth" :stroke="stroke" :fill="fill" fill-rule="evenodd"/><path d="M4,28 L4,32" stroke-linecap="round" stroke-linejoin="round" :stroke-width="strokeWidth" :stroke="stroke" :fill="fill" fill-rule="evenodd"/><path d="M36,28 L36,32" stroke-linecap="round" stroke-linejoin="round" :stroke-width="strokeWidth" :stroke="stroke" :fill="fill" fill-rule="evenodd"/></g></g></svg>
+</template>
+
+<script>
+export default {
+    name: "PinIconSofa",
+    props: {
+        filled: {
+            type: Boolean,
+            default: false
+        },
+        size: {
+            type: [Number, String],
+            default: '1rem'
+        },
+        color: {
+            type: String,
+            default: 'currentColor'
+        },
+        strokeWidth: {
+            type: [String, Number],
+            default: 4
+        },
+    },
+    computed: {
+        stroke() {
+            return this.color
+        },
+        fill() {
+            return this.filled ? this.color : 'none'
+        }
+    },
+}
+</script>

@@ -1,0 +1,35 @@
+<template>
+<svg :width="size" :height="size" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g><rect width="48" height="48" fill="white" fill-opacity="0.01" stroke-linejoin="round" :stroke-width="strokeWidth" stroke="none" fill-rule="evenodd"/><g transform="translate(4.000000, 4.000000)"><rect :stroke="stroke" :fill="fill" fill-rule="nonzero" x="8" y="0" width="30" height="40" stroke-linejoin="round" :stroke-width="strokeWidth"/><polygon :stroke="stroke" stroke-linecap="round" points="0 7.78947368 8 6 8 40" stroke-linejoin="round" :stroke-width="strokeWidth" :fill="fill" fill-rule="evenodd"/><polygon :stroke="stroke" :fill="fill" fill-rule="nonzero" points="23 14 18 20 23 26 28 20" stroke-linejoin="round" :stroke-width="strokeWidth"/><path d="M14,6 L14,10" :stroke="stroke" stroke-linecap="round" stroke-linejoin="round" :stroke-width="strokeWidth" :fill="fill" fill-rule="evenodd"/><path d="M32,30 L32,34" :stroke="stroke" stroke-linecap="round" stroke-linejoin="round" :stroke-width="strokeWidth" :fill="fill" fill-rule="evenodd"/></g></g></svg>
+</template>
+
+<script>
+export default {
+    name: "PinIconPoker",
+    props: {
+        filled: {
+            type: Boolean,
+            default: false
+        },
+        size: {
+            type: [Number, String],
+            default: '1rem'
+        },
+        color: {
+            type: String,
+            default: 'currentColor'
+        },
+        strokeWidth: {
+            type: [String, Number],
+            default: 4
+        },
+    },
+    computed: {
+        stroke() {
+            return this.color
+        },
+        fill() {
+            return this.filled ? this.color : 'none'
+        }
+    },
+}
+</script>

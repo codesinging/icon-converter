@@ -1,0 +1,35 @@
+<template>
+<svg :width="size" :height="size" viewBox="0 0 48 48" :fill="fill" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#icon-ebf365ed124a266)"><path d="M21 4.37256L4.02944 21.3431L26.6569 43.9705L43.6274 27" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M26.6567 10.0294L9.68618 27" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M32.3137 15.6863L15.3432 32.6568" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M37.9705 21.3431L20.9999 38.3137" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.0502 41.8492L20.2928 37.6066L10.3933 27.7071L6.15067 31.9497L8.27199 34.0711L9.6862 38.3137L13.9288 39.7279L16.0502 41.8492Z" :fill="fill" :stroke="stroke" :stroke-width="strokeWidth" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="icon-ebf365ed124a266"><rect width="48" height="48" fill="currentColor"/></clipPath></defs></svg>
+</template>
+
+<script>
+export default {
+    name: "PinIconAfroPick",
+    props: {
+        filled: {
+            type: Boolean,
+            default: false
+        },
+        size: {
+            type: [Number, String],
+            default: '1rem'
+        },
+        color: {
+            type: String,
+            default: 'currentColor'
+        },
+        strokeWidth: {
+            type: [String, Number],
+            default: 4
+        },
+    },
+    computed: {
+        stroke() {
+            return this.color
+        },
+        fill() {
+            return this.filled ? this.color : 'none'
+        }
+    },
+}
+</script>
