@@ -64,7 +64,7 @@ class Bootstrap {
             .replace('width="16"', ':width="size"')
             .replace('height="16"', ':height="size"')
             .replace('fill="currentColor"', ':fill="fill"')
-            .replace(/ class="([a-z -]+)"/, '')
+            .replace(/ class="([a-z0-9 -]+)"/, '')
     }
 
     _convert(filename, index) {
